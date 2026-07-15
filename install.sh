@@ -20,7 +20,8 @@ sudo pacman -S --needed --noconfirm \
   yay \
   vesktop \
   flatpak \
-  nautilus
+  nautilus \
+  tmux
 
 echo "==> Installing AUR packages..."
 
