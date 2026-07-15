@@ -7,7 +7,6 @@ echo "==> Installing official repo packages..."
 sudo pacman -S --needed --noconfirm \
   stow \
   alacritty \
-  kitty \
   neovim \
   btop \
   flameshot \
@@ -19,6 +18,7 @@ sudo pacman -S --needed --noconfirm \
   brave-bin \
   paru \
   yay \
+  vesktop \
   nautilus
 
 echo "==> Installing AUR packages..."
