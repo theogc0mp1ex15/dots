@@ -2,7 +2,7 @@
 
 set -e # stop the script if any command fails
 
-echo "==> Installing official repo packages..."
+echo "==> installing official repo packages..."
 
 sudo pacman -S --needed --noconfirm \
   stow \
@@ -21,19 +21,20 @@ sudo pacman -S --needed --noconfirm \
   vesktop \
   flatpak \
   nautilus \
+  zsh \
+  zsh-autosuggestions \
+  zsh-syntax-highlighting \
   tmux
 
-echo "==> Installing AUR packages..."
+echo "==> installing aur packages..."
 
-#paru -S --needed --noconfirm \
-#//etc/zen-browser-bin \
-#brave-bin
+paru -S --needed zsh-theme-powerlevel10k-git ttf-meslo-nerd-font-powerlevel10k
 
-# Uncomment and adjust if noctalia is AUR-only on your system
-# paru -S --needed --noconfirm noctalia
+# uncomment and adjust if noctalia is aur-only on your system
+paru -S --needed --noconfirm noctalia
 
-echo "==> Stowing dotfiles..."
+echo "==> stowing dotfiles..."
 cd "$(dirname "$0")"
-stow .
+stow zsh alacritty tmux git
 
-echo "==> Done! Restart your shell or log out/in to see everything take effect."
+echo "==> done! restart your shell or log out/in to see everything take effect."

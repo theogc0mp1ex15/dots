@@ -102,7 +102,7 @@
                 {
                     "clockColor": "secondary",
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatHorizontal": "h:mm AP ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
@@ -179,6 +179,11 @@
                     ]
                 },
                 {
+                    "defaultSettings": {
+                        "density": "comfortable",
+                        "maxHistorySize": 100,
+                        "showImagePreviews": true
+                    },
                     "id": "plugin:clipboard"
                 },
                 {
@@ -631,7 +636,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/c0mp1ex/Pictures/wallpapers",
+        "directory": "/home/c0mp1ex/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
