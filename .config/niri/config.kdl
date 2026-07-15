@@ -129,7 +129,7 @@ input {
 layout {
     always-center-single-column
     // Set gaps around windows in logical pixels.
-    gaps 5
+    gaps 40
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -274,8 +274,8 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-       left 4
-       right 4
+       left 0
+       right 0
        top 8
        bottom 8
     }
@@ -291,7 +291,6 @@ layout {
 spawn-at-startup "qs" "-c" "noctalia-shell"
 //spawn-at-startup "flatpak run com.discordapp.Discord"
 spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
-spawn-at-startup "flatpak" "run" "com.discordapp.Discord"
 //spawn-at-startup "/usr/bin/brave"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "xhost +SI:localuser:root"
@@ -300,7 +299,7 @@ spawn-at-startup "/usr/bin/zen-browser"
 spawn-at-startup "systemctl" "--user" "import-environment" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
 // spawn-at-startup "discord"
-// spawn-at-startup "vesktop" "--disable-gpu" "--disable-software-rasterizer" "--no-sandbox"
+spawn-at-startup "vesktop" "--disable-gpu" "--disable-software-rasterizer" "--no-sandbox"
 spawn-at-startup "/usr/lib/xdg-desktop-portal"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
