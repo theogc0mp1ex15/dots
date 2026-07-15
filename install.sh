@@ -19,6 +19,7 @@ sudo pacman -S --needed --noconfirm \
   paru \
   yay \
   vesktop \
+  flatpak \
   nautilus
 
 echo "==> Installing AUR packages..."
