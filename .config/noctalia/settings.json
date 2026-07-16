@@ -636,7 +636,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/c0mp1ex/Pictures/Wallpapers",
+        "directory": "/home/c0mp1ex/Pictures/wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -654,10 +654,10 @@
         "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
-        "skipStartupTransition": false,
+        "skipStartupTransition": true,
         "solidColor": "#1a1a2e",
-        "sortOrder": "name",
-        "transitionDuration": 1500,
+        "sortOrder": "name_desc",
+        "transitionDuration": 500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
             "fade",
@@ -670,7 +670,7 @@
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "recursive",
+        "viewMode": "browse",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
