@@ -6,7 +6,7 @@ echo "==> installing official repo packages..."
 
 sudo pacman -S --needed --noconfirm \
   stow \
-  alacritty \
+  kitty \
   neovim \
   btop \
   flameshot \
@@ -35,6 +35,6 @@ paru -S --needed --noconfirm noctalia
 
 echo "==> stowing dotfiles..."
 cd "$(dirname "$0")"
-stow zsh alacritty tmux git
+stow zsh kitty tmux git
 
 echo "==> done! restart your shell or log out/in to see everything take effect."
