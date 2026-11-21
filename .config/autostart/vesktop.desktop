@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Vesktop
+Comment=Vesktop autostart script
+Exec=/usr/lib/vesktop/vesktop --disable-gpu --disable-software-rasterizer --no-sandbox
+StartupNotify=false
+Terminal=false
+Icon=vesktop

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Fluxer Canary
+Comment=Fluxer
+Exec="/opt/fluxer-canary/fluxer-canary" --autostart
+TryExec=/opt/fluxer-canary/fluxer-canary
+Terminal=false
+Categories=Network;InstantMessaging;
+StartupWMClass=fluxer-canary
+SingleMainWindow=true
+X-GNOME-Autostart-enabled=true
+StartupNotify=false

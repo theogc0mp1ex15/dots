@@ -12,3 +12,7 @@ PS1='[\u@\h \W]\$ '
 export GOOGLE_API_KEY='AIzaSyAfU0jEhqQIoruuAV140LMksQPvAJdHEns'
 export GEMINI_API_KEY="AIzaSyAfU0jEhqQIoruuAV140LMksQPvAJdHEns"
 . "$HOME/.cargo/env"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/c0mp1ex/.local/bin:$PATH"

@@ -46,8 +46,8 @@ input {
         // dwtp
         // drag false
         // drag-lock
-        //natural-scroll
-        // accel-speed 0.2
+        natural-scroll
+        accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
@@ -63,7 +63,7 @@ input {
         //scroll-button-lock
         scroll-button 274
         accel-profile "flat"     // No acceleration curve
-        accel-speed -0.5         // MAX raw speed (-1.0 max, -0.5 = blazing)
+        accel-speed 0.2         // MAX raw speed (-1.0 max, -0.5 = blazing)
         scroll-factor 1.5        // DOUBLE scroll distance per tick
     }
 
@@ -276,7 +276,7 @@ layout {
     struts {
        left 0
        right 0
-       top 8
+       top 0
        bottom 8
     }
 }
@@ -288,18 +288,19 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
-spawn-at-startup "qs" "-c" "noctalia-shell"
 //spawn-at-startup "flatpak run com.discordapp.Discord"
+spawn-at-startup "noctalia"
 spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 //spawn-at-startup "/usr/bin/brave"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "xhost +SI:localuser:root"
 // spawn-at-startup "/usr/bin/Telegram"
-spawn-at-startup "/usr/bin/zen-browser"
+//spawn-at-startup "/usr/bin/zen-browser"
+spawn-at-startup "/usr/bin/firefox-developer-edition"
 spawn-at-startup "systemctl" "--user" "import-environment" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
 // spawn-at-startup "discord"
-spawn-at-startup "vesktop" "--disable-gpu" "--disable-software-rasterizer" "--no-sandbox"
+spawn-at-startup "vesktop"
 spawn-at-startup "/usr/lib/xdg-desktop-portal"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -307,7 +308,7 @@ spawn-at-startup "/usr/lib/xdg-desktop-portal"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -330,10 +331,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
-    off
+    //off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-     //slowdown 0.2
+    slowdown 0.2
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -359,6 +360,11 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
+
+//window-rule {
+    //match is-window-cast-target=false  // matches everything; see note below
+    //open-floating false
+//}
 
 // Make inactive windows semitransparent.
 window-rule {
@@ -689,9 +695,3 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
-
-include "dms/cursor.kdl"
-
-include "dms/outputs.kdl"
-
-include "dms/windowrules.kdl"

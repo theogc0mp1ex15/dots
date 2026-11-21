@@ -1,0 +1,5 @@
+.config/pulse/
+.config/spotify/
+.config/noctalia/plugins/
+*.bak
+.config/micro/syntax/

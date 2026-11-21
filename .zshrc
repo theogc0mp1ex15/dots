@@ -28,3 +28,9 @@ bindkey "^[[B" history-search-forward
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/c0mp1ex/.local/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
+alias nosleep='systemd-inhibit --what=handle-lid-switch --who=me --why="keep awake" sleep infinity'
